@@ -1,13 +1,14 @@
 $(document).ready(function() {
     M.updateTextFields();
 });
-const entrar = () => {
-    let email2 = document.getElementById("email_inline2").value;
-    let pass2 = document.getElementById("pass_inline2").value;
 
-    firebase.auth().signInWithEmailAndPassword(email2, pass2)
+const registrar = () => {
+    let email = document.getElementById("email_inline").value;
+    let pass = document.getElementById("pass_inline").value;
+
+    firebase.auth().createUserWithEmailAndPassword(email, pass)
         .then(() => {
-            location.href = "../html/opciones.html";
+            location.href = "../html/inicio.html";
         })
         .catch(function(error) {
             // Handle Errors here.

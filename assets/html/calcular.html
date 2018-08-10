@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/calcular.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,12 +24,83 @@
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
     </nav>
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../js/inicio.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <section>
+        <div class="container">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div id="numeroTarjeta" class="input-field col s6">
+                            <i class="material-icons prefix">credit_card</i>
+                            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                            <label for="icon_prefix2">Número tarjeta</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <select>
+                      <option value="" enabled selected>Tarifa</option>
+                      <option id="tarjeta1" value="1">Option 1</option>
+                      <option id="tarjeta2" value="2">Option 2</option>
+                      <option id="tarjeta3" value="3">Option 3</option>
+                    </select>
+                    <label>Tarifa</label>
+                </div>
+                <div class="input-field col s6">
+                    <select>
+                          <option value="" enabled selected>Tarjeta</option>
+                          <option id="tarjeta1" value="1">Option 1</option>
+                          <option id="tarjeta2" value="2">Option 2</option>
+                          <option id="tarjeta3" value="3">Option 3</option>
+                        </select>
+                    <label>Tarjeta</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <button class="saldo">CALCULAR</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <center>
+                        <div class="titulo">
 
+                            <h6 class="saldoTotal">COSTO PASAJE</h6>
+
+                        </div>
+                        <div class="cuadroSaldo">
+
+                            <h4 class="montoSaldo">$9999</h4>
+
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <center>
+                        <div class="titulo">
+
+                            <h6 class="saldoTotal">SALDO FINAL</h6>
+
+                        </div>
+                        <div class="cuadroSaldo">
+
+                            <h4 class="montoSaldo">$9999</h4>
+
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -43,6 +114,11 @@
         };
         firebase.initializeApp(config);
     </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="../js/calcular.js"></script>
 </body>
 
 </html>
