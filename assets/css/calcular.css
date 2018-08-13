@@ -6,7 +6,7 @@ body {
     margin-top: 5em;
 }
 
-.saldo {
+.btnCalcular {
     background-color: #FFB03D;
     color: white;
     width: 50%;
@@ -23,19 +23,18 @@ body {
     margin-bottom: -3em;
 }
 
-.cuadroSaldo {
+#costoTarifa {
     background-color: #FFB03D;
     color: white;
     width: 50%;
-    height: 4em;
     margin-top: -1.5em;
+    font-size: xx-large;
 }
 
-.montoSaldo {
+#cuadroSaldoFinal {
     background-color: #FFB03D;
     color: white;
-}
-
-.saldoTotal {
-    margin-top: 1em;
+    width: 50%;
+    margin-top: -1.5em;
+    font-size: xx-large;
 }

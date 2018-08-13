@@ -16,10 +16,13 @@
     <nav class="grey darken-4">
         <ul id="slide-out" class="sidenav">
             <li><a class="sidenav-close amber-text" href="#!">Trans-Lab</a></li>
-            <li><a class="sidenav-close amber-text" href="#!"><i class="material-icons">apps</i>Calcular Tarifa</a></li>
-            <li><a class="sidenav-close amber-text" href="#!"><i class="material-icons">person</i>Perfil</a></li>
-            <li><a class="sidenav-close amber-text" href="#!"><i class="material-icons">question_answer</i>Preguntas Frecuentes</a></li>
-            <li><a class="sidenav-close amber-text" href="#!"><i class="material-icons">home</i>Home</a></li>
+            <li><a class="sidenav-close amber-text" href="verSaldo.html"><i class="material-icons">attach_money</i>Saldo</a></li>
+            <li><a class="sidenav-close amber-text" href="calcular.html"><i class="material-icons">apps</i>Calcular Tarifa</a></li>
+            <li><a class="sidenav-close amber-text" href="perfil.html"><i class="material-icons">person</i>Perfil</a></li>
+            <li><a class="sidenav-close amber-text" href="preguntas.html"><i class="material-icons">question_answer</i>Preguntas Frecuentes</a></li>
+            <li><a class="sidenav-close amber-text" href="inicio.html"><i class="material-icons">home</i>Home</a></li>
+            <li><a class="sidenav-close amber-text" onclick="logOut()"><i class="material-icons">exit_to_app
+            </i>Log out</a></li>
         </ul>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
@@ -28,8 +31,9 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <img class="materialboxed" id="profilePicture" width="30%" src="../img/profilePic.png">
+                    <center> <img class="materialboxed" id="profilePicture" width="30%" src="../img/profilePic.png">
                 </div>
+                </center>
             </div>
         </div>
     </section>
@@ -37,49 +41,18 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <input id="email_inline" type="email" class="validate">
+                    <div id="userEmail"></div>
                     <div id="numeroTarjeta" class="input-field col s6">
                         <i class="material-icons prefix">credit_card</i>
                         <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
                         <label for="icon_prefix2">Número tarjeta</label>
                     </div>
-                    <button class="agregarTarjeta">AGREGAR TARJETA</button>
+                    <button class="agregarTarjeta" onclick='guardarTarjeta()'>AGREGAR TARJETA</button>
                     <div class="row">
                         <form class="col s12">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Textarea</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Textarea</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Textarea</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Textarea</label>
+                                    <div id="card"></div>
                                 </div>
                             </div>
                         </form>
